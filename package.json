@@ -1,0 +1,23 @@
+{
+  "name": "edj-eslint-rules",
+  "version": "1.0.0",
+  "description": "ESLint rules shared across projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edj-boston/edj-eslint-rules.git"
+  },
+  "keywords": [
+    "ESLint",
+    "Rules"
+  ],
+  "author": "Eric Johnson <edj.boston@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edj-boston/edj-eslint-rules/issues"
+  },
+  "homepage": "https://github.com/edj-boston/edj-eslint-rules#readme"
+}
