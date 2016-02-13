@@ -1,2 +1,2 @@
 # edj-eslint-rules
-My ESLint rules shared across projects
+My ESLint 2.x rules shared across projects

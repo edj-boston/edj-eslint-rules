@@ -1,7 +1,7 @@
 {
   "name": "edj-eslint-rules",
-  "version": "1.0.0",
-  "description": "ESLint rules shared across projects",
+  "version": "2.0.0",
+  "description": "ESLint 2.x rules shared across projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
