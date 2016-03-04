@@ -14,7 +14,7 @@ const rules = {
     "global-require": 2,
     "eol-last": 2,
     "handle-callback-err": 2,
-    "indent": 2,
+    "indent": [ 2, 4, { "SwitchCase": 1 } ],
     "key-spacing": [ 2, { "align": "colon", "beforeColon": true, "afterColon": true } ],
     "linebreak-style": 2,
     "lines-around-comment": 2,
