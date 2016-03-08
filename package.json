@@ -1,6 +1,6 @@
 {
   "name": "edj-eslint-rules",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "ESLint 2.x rules shared across projects",
   "main": "lib/rules.js",
   "scripts": {
