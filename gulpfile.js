@@ -1,9 +1,10 @@
 'use strict';
 
-const david    = require('gulp-david'),
-    eslint = require('gulp-eslint'),
+const david  = require('gulp-david'),
+    eslint   = require('gulp-eslint'),
     gulp     = require('gulp'),
-    rules    = require('./lib/rules');
+    rules    = require('./lib/rules'),
+    sequence = require('gulp-sequence');
 
 
 // Lint as JS files (including this one)
@@ -29,6 +30,12 @@ gulp.task('lint', () => {
 gulp.task('deps', () => {
     return gulp.src('package.json')
         .pipe(david());
+});
+
+
+// Run tests and produce coverage
+gulp.task('travis', done => {
+    sequence('lint')(done);
 });
 
 
