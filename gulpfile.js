@@ -9,20 +9,21 @@ const david  = require('gulp-david'),
 
 // Lint as JS files (including this one)
 gulp.task('lint', () => {
-    return gulp.src([
+    const globs = [
         '*.js',
         'lib/*.js',
         'test/*.js',
         '!node_modules/**'
-    ])
-    .pipe(eslint({
-        extends : 'eslint:recommended',
-        env     : { node : true, es6 : true, mocha : true },
-        globals : { $ : true, window : true, document : true, ga : true },
-        rules
-    }))
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    ];
+
+    return gulp.src(globs)
+        .pipe(eslint({
+            extends       : 'eslint:recommended',
+            parserOptions : { ecmaVersion : 6 },
+            rules
+        }))
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
 });
 
 

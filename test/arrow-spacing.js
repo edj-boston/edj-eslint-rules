@@ -1,5 +1,5 @@
 'use strict';
 
 a => {
-    a++;
+    console.log(a);
 };
