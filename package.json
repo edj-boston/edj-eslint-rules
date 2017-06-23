@@ -1,14 +1,14 @@
 {
-  "name": "edj-eslint-rules",
-  "version": "2.1.0",
-  "description": "ESLint 2.x rules shared across projects",
+  "name": "@edjboston/eslint-rules",
+  "version": "2.2.0",
+  "description": "ESLint 4.x rules shared across projects",
   "main": "lib/rules.js",
   "scripts": {
     "test": "gulp lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edj-boston/edj-eslint-rules.git"
+    "url": "git+https://github.com/edj-boston/eslint-rules.git"
   },
   "keywords": [
     "ESLint",
@@ -17,9 +17,9 @@
   "author": "Eric Johnson <edj.boston@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/edj-boston/edj-eslint-rules/issues"
+    "url": "https://github.com/edj-boston/eslint-rules/issues"
   },
-  "homepage": "https://github.com/edj-boston/edj-eslint-rules#readme",
+  "homepage": "https://github.com/edj-boston/eslint-rules#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-david": "^1.0.1",
