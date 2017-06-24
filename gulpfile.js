@@ -1,13 +1,9 @@
 'use strict';
 
-const david      = require('gulp-david'),
-    depcheck     = require('depcheck'),
-    eslint       = require('gulp-eslint'),
-    gulp         = require('gulp'),
-    gulpDepcheck = require('gulp-depcheck'),
-    rules        = require('./lib/rules'),
-    sequence     = require('gulp-sequence');
-
+const depcheck = require('depcheck'),
+    g          = require('gulp-load-plugins')(),
+    gulp       = require('gulp'),
+    rules      = require('./lib/rules');
 
 // Lint as JS files (including this one)
 gulp.task('lint', () => {
@@ -19,25 +15,25 @@ gulp.task('lint', () => {
     ];
 
     return gulp.src(globs)
-        .pipe(eslint({
+        .pipe(g.eslint({
             extends       : 'eslint:recommended',
             parserOptions : { ecmaVersion : 6 },
             rules
         }))
-        .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
+        .pipe(g.eslint.format())
+        .pipe(g.eslint.failAfterError());
 });
 
 
 // Check deps with David service
 gulp.task('david', () => {
     return gulp.src('package.json')
-        .pipe(david());
+        .pipe(g.david());
 });
 
 
 // Check for unused deps with depcheck
-gulp.task('depcheck', gulpDepcheck({
+gulp.task('depcheck', g.depcheck({
     specials : [
         depcheck.special['gulp-load-plugins']
     ]
@@ -46,7 +42,7 @@ gulp.task('depcheck', gulpDepcheck({
 
 // Run tests and produce coverage
 gulp.task('travis', done => {
-    sequence('lint')(done);
+    g.sequence('lint')(done);
 });
 
 
